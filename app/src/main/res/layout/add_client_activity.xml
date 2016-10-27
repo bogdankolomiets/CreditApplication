@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimaryDark">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvCurrentDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:gravity="center_horizontal"
+                android:padding="8dp"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                tools:text="22.10.2016"/>
+
+            <LinearLayout
+                android:id="@+id/dateContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvCurrentDate"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/etPayDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:hint="Дата виплати"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/etFactPayDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:hint="Факт виплатa"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dateContainer"
+                android:gravity="center_horizontal"
+                android:hint="Ім’я"/>
+
+            <EditText
+                android:id="@+id/etSurname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etName"
+                android:gravity="center_horizontal"
+                android:hint="Фамілія"/>
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etSurname"
+                android:gravity="center_horizontal"
+                android:hint="Телефон"/>
+
+            <EditText
+                android:id="@+id/etPeriod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etPhone"
+                android:gravity="center_horizontal"
+                android:hint="Кредитний період"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/etAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etPeriod"
+                android:gravity="center_horizontal"
+                android:hint="Сума до видачі"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/field_height"
+                android:layout_below="@+id/etAmount"
+                android:layout_marginTop="32dp"
+                android:background="@android:color/darker_gray"
+                android:gravity="center"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp"
+                tools:text="Сума до сплати"/>
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvResult"
+                android:layout_marginTop="16dp"
+                android:text="Порахувати"/>
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnAdd"
+                android:text="Видалити"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

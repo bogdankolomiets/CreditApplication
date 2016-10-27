@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:text="Створення пропозиції"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"/>
+
+        <View
+            android:id="@+id/btnAdd"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentRight="true"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/field_height"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical"
+            android:text="Назва кредиту:"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/field_height"
+            android:layout_toRightOf="@+id/tvName"/>
+
+        <TextView
+            android:id="@+id/tvPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/field_height"
+            android:layout_below="@+id/tvName"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical"
+            android:text="Відсоток:"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etPercent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/field_height"
+            android:layout_below="@+id/etName"
+            android:layout_toRightOf="@+id/tvPercent"
+            android:inputType="number"/>
+
+        <TextView
+            android:id="@+id/tvMaxPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/field_height"
+            android:layout_below="@+id/tvPercent"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical"
+            android:text="Макс період(міс):"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etMaxPeriod"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/field_height"
+            android:layout_below="@+id/etPercent"
+            android:layout_toRightOf="@+id/tvMaxPeriod"
+            android:inputType="number"/>
+
+        <TextView
+            android:id="@+id/tvCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/field_height"
+            android:layout_below="@+id/tvMaxPeriod"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical"
+            android:text="Валюта:"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/etCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/field_height"
+            android:layout_below="@+id/etMaxPeriod"
+            android:layout_toRightOf="@+id/tvCurrency"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Зберегти"/>
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Видалити"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+    </LinearLayout>
+</RelativeLayout>

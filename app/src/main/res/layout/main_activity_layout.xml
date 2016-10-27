@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimaryDark">
+
+        <RelativeLayout
+            android:id="@+id/btnEdit"
+            android:layout_width="48dp"
+            android:layout_height="?actionBarSize"
+            android:layout_toLeftOf="@+id/btnAdd">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_edit_white_24dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnAdd"
+            android:layout_width="48dp"
+            android:layout_height="?actionBarSize"
+            android:layout_alignParentRight="true"
+            android:paddingRight="8dp">
+
+            <ImageView
+                android:id="@+id/btnAddIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_add_white_24dp"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvCreditsOffers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:paddingBottom="8dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="8dp"/>
+</RelativeLayout>
